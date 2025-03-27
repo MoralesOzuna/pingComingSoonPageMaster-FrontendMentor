@@ -65,7 +65,7 @@ exports.imagenes = imagenes;
 exports.versionWebp = versionWebp;
 exports.versionAvif = versionAvif;
 exports.default = series(imagenes,  versionWebp, css, dev)
-exports.build = series(imagenes, versionWebp, versionAvif, css); // Tarea específica para Netlify.
+exports.build = series(imagenes, versionWebp, css); // Tarea específica para Netlify.
 
 
 /* Series - ejecuta una primer tarea y hasta que finaliza, inicia la siguiente
