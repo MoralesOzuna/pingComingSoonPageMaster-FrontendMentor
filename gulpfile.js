@@ -45,7 +45,7 @@ function versionWebp(){
 
 function versionAvif(){
     const opciones = {
-        quality: 50
+        quality: 80
     }
     return src('src/images/**/*.{png,jpg}')
         .pipe(avif(opciones))
@@ -65,6 +65,8 @@ exports.imagenes = imagenes;
 exports.versionWebp = versionWebp;
 exports.versionAvif = versionAvif;
 exports.default = series(imagenes,  versionWebp, versionAvif, css, dev)
+exports.build = series(imagenes, versionWebp, versionAvif, css); // Tarea específica para Netlify.
+
 
 /* Series - ejecuta una primer tarea y hasta que finaliza, inicia la siguiente
 parallel - todas inician al mismo tiempo*/
