@@ -1,0 +1,7 @@
+/* App.scss normalmente es el archivo encargado de traer todos los modulos*/
+
+
+@use 'base'; //mandamos a traer la carpeta 'base' donde de forma automatica Sass nos va a traer el archivo _index.scss
+@use 'header';
+@use 'main';
+@use 'footer';

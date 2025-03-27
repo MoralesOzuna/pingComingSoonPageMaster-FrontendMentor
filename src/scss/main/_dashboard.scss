@@ -1,0 +1,28 @@
+@use 'base/mixins' as m;
+
+.content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .dashboard{
+        margin: 8rem 0;
+
+
+      /*   width: 90rem; */
+        width: 35rem;
+       /*  height: 70rem; */
+        object-fit: contain;
+    }
+
+
+    @include m.tablet {
+        .dashboard{
+            margin: 0;
+            width: 90rem;
+            height: 70rem;
+        }
+    }
+}
+

@@ -1,0 +1,12 @@
+@use 'base/variables' as v;
+
+
+footer{
+    padding: 5rem 0;
+    
+
+    .copyright{
+        color: v.$gray;
+        font-size: calc(v.$fontSize - .2rem);
+    }
+}

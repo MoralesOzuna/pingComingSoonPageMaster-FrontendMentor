@@ -1,0 +1,49 @@
+@use  'variables' as v;
+@use 'mixins' as m;
+@use "sass:math";
+
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+  height: 100vh;
+  font-family: v.$font;
+}
+h1, p{
+  text-align: center;
+}
+h1{
+  font-size: calc(v.$fontSize + 1rem);
+}
+p{
+  font-size: v.$fontSize;
+}
+.contenedor{
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.red{
+  color: v.$red;
+  font-size: 1.3rem;
+  font-style: italic;
+  grid-row: 2/3;
+}
+@include m.tablet {
+  .red{
+    margin-top: 0;
+    text-align: left;
+  }
+}
+.inputError{
+  border: 1px solid v.$red !important;
+}

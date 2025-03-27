@@ -1,0 +1,24 @@
+@use 'base/variables' as v;
+
+.social{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+ 
+
+    .social__icon{
+        width: 4rem;
+        height: 4rem;
+        border: 1px solid v.$paleBlue;
+        border-radius: 50%;
+        padding: 1rem;
+
+        &:hover{
+            background-color: #3f5b75;
+            color: red;
+        }
+    }
+}

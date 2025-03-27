@@ -1,0 +1,24 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.header__title, .header__text{
+    margin: 0 auto;
+}
+
+.header__title{
+    font-weight: v.$fontWg300;
+    padding: 2rem;
+    span{
+        font-weight: v.$fontWg700;
+      
+    }
+}
+
+@include m.tablet {
+    .header__title{
+        font-size: calc( v.$fontSize + 2rem);
+    }
+    .header__text{
+        margin-bottom: 2rem;
+    }
+}
