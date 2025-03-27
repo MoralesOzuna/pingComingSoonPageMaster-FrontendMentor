@@ -44,9 +44,9 @@ function versionWebp(){
 }
 
 function versionAvif(){
-    const opciones = {
+  /*   const opciones = {
         quality: 80
-    }
+    } */
     return src('src/images/**/*.{png,jpg}')
         .pipe(avif(opciones))
         .pipe ( dest('build/img'));
